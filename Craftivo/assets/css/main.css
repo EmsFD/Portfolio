@@ -4315,6 +4315,213 @@ section,
   padding-left: 20px;
 }
 
+.card-text strong {
+  color: var(--heading-color);
+  font-weight: 600;
+}
+
+.feature-list {
+  list-style: none;
+  padding-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.feature-list li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 8px;
+  color: var(--default-color);
+  line-height: 1.6;
+}
+
+.feature-list li::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.feature-list li strong {
+  color: var(--heading-color);
+}
+
+ol.feature-list {
+  counter-reset: item;
+  list-style: none;
+}
+
+ol.feature-list li {
+  counter-increment: item;
+}
+
+ol.feature-list li::before {
+  content: counter(item) ".";
+  color: var(--accent-color);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* Section Divider for Admin/User Sides */
+.section-divider {
+  margin: 0 0 40px 0;
+  padding: 20px 30px;
+  background: linear-gradient(135deg, rgba(255, 77, 79, 0.15) 0%, rgba(255, 77, 79, 0.05) 100%);
+  border-left: 5px solid var(--accent-color);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(255, 77, 79, 0.1);
+}
+
+.side-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Screenshot Gallery */
+.screenshot-gallery {
+  padding: 0 20px;
+}
+
+.screenshot-gallery .glightbox {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  margin-bottom: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.screenshot-gallery .glightbox:hover {
+  box-shadow: 0 4px 20px rgba(255, 77, 79, 0.3);
+}
+
+.screenshot-gallery .glightbox::after {
+  content: '\f002';
+  font-family: "bootstrap-icons";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5rem;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.screenshot-gallery .glightbox:hover::after {
+  opacity: 1;
+}
+
+.screenshot-gallery .glightbox::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+  border-radius: 8px;
+}
+
+.screenshot-gallery .glightbox:hover::before {
+  opacity: 1;
+}
+
+.screenshot-gallery .p-card-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  padding: 0;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.screenshot-gallery .glightbox:hover .p-card-image {
+  transform: scale(1.08);
+}
+
+.screenshot-gallery > div {
+  position: relative;
+  margin-bottom: 35px;
+}
+
+.screenshot-label {
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--heading-color);
+  margin-top: 12px;
+  margin-bottom: 0;
+  padding: 10px 8px;
+  background: linear-gradient(135deg, rgba(255, 77, 79, 0.08) 0%, rgba(255, 77, 79, 0.03) 100%);
+  border-radius: 6px;
+  border: 1px solid rgba(255, 77, 79, 0.1);
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.screenshot-gallery > div:hover .screenshot-label {
+  background: linear-gradient(135deg, rgba(255, 77, 79, 0.15) 0%, rgba(255, 77, 79, 0.08) 100%);
+  color: var(--accent-color);
+  border-color: rgba(255, 77, 79, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Spacing adjustments for screenshot cards */
+.p-card.mt-4 {
+  margin-top: 2rem !important;
+  padding: 30px 25px;
+}
+
+.p-card.mt-4:first-of-type {
+  margin-top: 2.5rem !important;
+}
+
+
+/* Responsive adjustments for screenshot galleries */
+@media (max-width: 768px) {
+  .section-divider {
+    padding: 15px 20px;
+    margin: 0 0 30px 0;
+  }
+  
+  .side-title {
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+  }
+  
+  .screenshot-gallery {
+    padding: 0 10px;
+  }
+  
+  .screenshot-gallery .p-card-image {
+    height: 200px;
+  }
+  
+  .screenshot-label {
+    font-size: 0.85rem;
+    padding: 8px 6px;
+  }
+  
+  .screenshot-gallery > div {
+    margin-bottom: 25px;
+  }
+}
+
 .p-card .glightbox {
   display: block;
   cursor: pointer;
