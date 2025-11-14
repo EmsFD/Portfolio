@@ -4236,12 +4236,9 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
 
 .timeline-track .timeline-center {
-  align-content: center; !important
+  align-content: center !important;
 }
 
 
@@ -4256,4 +4253,175 @@ section,
   text-align: center;
   color: grey;
   padding: 20px 15px;
+}
+
+
+
+
+.modal-title {
+  color: #0077b5;
+}
+
+
+.p-card {
+  border: 3px solid #ff4d4f;
+  border-radius: 15px;
+  padding: 20px;
+  background: #141414;
+  width: 60rem;
+  margin: 0 auto 40px auto;
+  max-width: 95%;
+  box-shadow: 0 4px 15px rgba(255, 77, 79, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.p-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(255, 77, 79, 0.3);
+}
+
+.p-card-body {
+  padding: 20px 40px;
+  text-align: left;
+}
+
+.p-card-body .card-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 25px;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.card-info-section {
+  margin-bottom: 20px;
+}
+
+.card-label {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ff4d4f;
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+
+.card-text {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--default-color);
+  line-height: 1.6;
+  margin-bottom: 0;
+  padding-left: 20px;
+}
+
+.p-card .glightbox {
+  display: block;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.p-card .glightbox::after {
+  content: '\f002';
+  font-family: "bootstrap-icons";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+  text-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.p-card .glightbox:hover::after {
+  opacity: 0.9;
+}
+
+.p-card .glightbox::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.p-card .glightbox:hover::before {
+  opacity: 1;
+}
+
+.p-card-image {
+  width: 100%;
+  height: auto;
+  max-height: 30rem;
+  padding: 10px;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.p-card .glightbox:hover .p-card-image {
+  transform: scale(1.05);
+}
+
+.p-card-image-mwidth {
+  width: 100%;
+  height: auto;
+  max-height: 35rem;
+  padding: 10px;
+  object-fit: contain;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.p-card .glightbox:hover .p-card-image-mwidth {
+  transform: scale(1.05);
+}
+
+/* Portfolio Section Spacing */
+.portfolio.section {
+  padding: 60px 0;
+}
+
+/* Responsive Design for Cards */
+@media (max-width: 768px) {
+  .p-card {
+    width: 100%;
+    padding: 15px;
+    margin: 0 auto 30px auto;
+  }
+  
+  .p-card-body {
+    padding: 15px 20px;
+  }
+  
+  .p-card-body .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .card-label {
+    font-size: 1rem;
+  }
+  
+  .card-text {
+    font-size: 0.95rem;
+    padding-left: 15px;
+  }
+  
+  .p-card-image,
+  .p-card-image-mwidth {
+    max-height: 25rem;
+  }
 }
