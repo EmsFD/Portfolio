@@ -4243,3 +4243,17 @@ section,
 .timeline-track .timeline-center {
   align-content: center; !important
 }
+
+
+.portfolio-info2 {
+  font-size: 20px;
+  padding: 20px 15px;
+  height: 5rem;
+}
+
+.project-year2 {
+  font-size: 20px;
+  text-align: center;
+  color: grey;
+  padding: 20px 15px;
+}
