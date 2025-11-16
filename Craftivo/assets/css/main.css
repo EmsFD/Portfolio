@@ -4632,3 +4632,48 @@ ol.feature-list li::before {
     max-height: 25rem;
   }
 }
+
+.p-card-appen {
+  border: 3px solid #ff4d4f;
+  border-radius: 15px;
+  padding: 20px;
+  background: #141414;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 4px 15px rgba(255, 77, 79, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.p-card-appen:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(255, 77, 79, 0.3);
+}
+
+.appendices-action {
+  font-size: 2rem;
+  position: static;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.appendices-action a {
+  color: #ff4d4f;
+  transition: color 0.3s ease;
+}
+
+.appendices-action a:hover {
+  color: #ff6b6d;
+}
+
+.p-card-appen .p-card-body {
+  text-align: center;
+  padding: 15px;
+}
+
+.p-card-appen strong {
+  display: block;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
